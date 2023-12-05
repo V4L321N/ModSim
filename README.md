@@ -1,6 +1,7 @@
 # Course on Modeling and Simulation at the University Of Graz 2023
 
 Exercise 1 deals with different growth models \\
+
 Exercise 2 \\
 Exercise 3 \\
 Exercise 4 \\
