@@ -92,9 +92,9 @@ d_streight_40 = np.round(ga40*r_0,3)
 print(f'Horizontal Distances:\nEuler Step 650 km: {d_euler_650} km\nRK4 650 km: {d_RK4_650} km\nEuler step 40 km: {d_euler_40} km\nRK4 40 km: {d_RK4_40} km\nEuler Step step size 2 40 km: {d_euler_40_u} km\nRK4 step size 2 40 km: {d_RK4_40_u} km\nStreight 650 km: {d_streight_650} km\nStreight 40 km: {d_streight_40} km')
 
 ### Theta Euler ###
-p = 1
-plt.figure(p)
-p = p + 1
+# p = 1
+# plt.figure(p)
+# p = p + 1
 fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
 ax.set_theta_direction(-1)
 ax.set_theta_offset(np.pi/2)
@@ -116,8 +116,8 @@ plt.show()
 
 
 ### Theta RK4 ###
-plt.figure(p)
-p = p + 1
+# plt.figure(p)
+# p = p + 1
 fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
 ax.set_theta_direction(-1)
 ax.set_theta_offset(np.pi/2)
@@ -125,10 +125,10 @@ ax.set_rlim(r_0, r_0 + 650)
 ax.set_thetalim(-np.pi/500, np.pi/2 )
 for i in range(len(phi_0)):
     ax.plot(2.5*Theta_RK4[:,i], r, label=f'Start at {phi_0g[i]}')
-ax.set_xticks([0, G2R(10), G2R(20), G2R(30), G2R(40), G2R(50), G2R(60), G2R(70), G2R(80), G2R(90)])
-ax.set_xticklabels(['0', '4', '8', '12', '16', '20', '24', '28', '32', '36'])
-ax.set_yticks(np.arange(r_0, r_0+650, 100))
-ax.set_yticklabels(['0', '100', '200', '300', '400', '500', '600'])
+#ax.set_xticks([0, G2R(10), G2R(20), G2R(30), G2R(40), G2R(50), G2R(60), G2R(70), G2R(80), G2R(90)])
+#ax.set_xticklabels(['0', '4', '8', '12', '16', '20', '24', '28', '32', '36'])
+#ax.set_yticks(np.arange(r_0, r_0+650, 100))
+#ax.set_yticklabels(['0', '100', '200', '300', '400', '500', '600'])
 plt.legend(loc='lower right')
 plt.ylabel('Orbital height in [km]')
 plt.xlabel('Ray propagation in []')
@@ -137,8 +137,8 @@ plt.show()
 #plt.savefig('ThetaRK4.png')
 
 ### Phi ###
-plt.figure(p)
-p = p + 1
+# plt.figure(p)
+# p = p + 1
 fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
 ax.set_theta_direction(-1)
 ax.set_theta_offset(np.pi/2)
@@ -174,8 +174,8 @@ alphaR_g = R2G(alphaR)
 
 ### Plot beam paths until 650km
 for i in range(len(phi_0)): 
-    plt.figure(p)
-    p = p + 1
+    # plt.figure(p)
+    # p = p + 1
     fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
     ax.set_theta_direction(-1)
     ax.set_theta_offset(np.pi/2)
@@ -191,12 +191,10 @@ for i in range(len(phi_0)):
     plt.title(f'trajectory at start angle {np.round(R2G(phi_0[i]), 1)}')
     #plt.savefig(f'T1_Phi{i}.png')
     plt.show()
-p = p + 1
+# p = p + 1
 
 ### Plot beam paths until 40km
 for i in range(len(phi_0)): 
-    plt.figure(p)
-    p = p + 1
     fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
     
     ax.set_theta_direction(-1)
@@ -213,9 +211,7 @@ for i in range(len(phi_0)):
     plt.ylabel('Orbital height in [km]')
     plt.xlabel('Ray propagation in []')
     plt.title(f'trajectory at start angle {np.round(R2G(phi_0[i]), 1)}')
-    #plt.savefig(f'T1_Phi{i}.png')
     plt.show()
-p = p + 1
 
 
 
