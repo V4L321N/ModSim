@@ -13,3 +13,7 @@ Exercise 5
 Exercise 6&7 implement a RK4 method for a ray of light and models the path starting at earths surface and travelling through the atmosphere.
 
 Exercise 8&9 implicit and explicit solutions of the partial differential description of the electron density in the upper atmosphere
+
+Exercise 10&11
+
+Exercise 12
